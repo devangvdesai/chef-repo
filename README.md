@@ -39,13 +39,17 @@ on a single server or multiple servers:
 
 The following paragraphs will guide you to set up your own server to host Ruby on Rails applications.
 
+### Assumptions
+
+An "ubuntu" user exists on the remote machine.
+
 ### 1. Set up this repository
 
 Clone the repository onto your own workstation. For example in your `~/Code` directory:
 
 ```sh
 $ cd ~/Code
-$ git clone git://github.com/intercity/chef-repo.git chef_repo
+$ git clone git://github.com/devangvdesai/chef-repo.git chef_repo
 ```
 
 Run bundle:
@@ -68,6 +72,13 @@ Use the following command to install Chef on your server and prepare it to be in
 bundle exec knife solo prepare <your user>@<your host/ip>
 ```
 
+For passing an identity file use the following - [Kinfe solo commands](http://matschaffer.github.io/knife-solo/):
+Example 
+
+```sh
+bundle exec knife solo prepare <your user>@<your host/ip> -i /path/to/pem_file
+```
+
 This will create a file
 
 ```
@@ -79,7 +90,7 @@ Now copy the the contents from the `nodes/sample_host.json` from this repository
 When this is done. Run the following command to start the full installation of your server:
 
 ```sh
-bundle exec knife solo cook <your user>@<your host/ip>
+bundle exec knife solo cook <your user>@<your host/ip> -i /path/to/pem_file
 ```
 
 ### 3. Deploy your application

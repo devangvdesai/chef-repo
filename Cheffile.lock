@@ -101,7 +101,6 @@ DEPENDENCIES
   nginx (~> 2.7.4)
   packages (>= 0)
   postfix (~> 3.6.2)
-  postgresql (~> 3.4.1)
   rails (>= 0)
   rbenv (~> 1.7.1)
   ruby_build (~> 0.8.0)

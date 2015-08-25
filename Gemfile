@@ -10,3 +10,9 @@ gem "kitchen-vagrant"
 gem "kitchen-digitalocean"
 gem "serverspec"
 gem "rspec"
+
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-rails', '~> 1.1'
+gem 'capistrano-passenger'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-ssh-doctor', '~> 1.0'

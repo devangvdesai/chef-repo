@@ -17,9 +17,9 @@ run_list(
 default_attributes(
   "nginx" => { "server_tokens" => "off", "package_name" => "nginx-extras" },
   "rbenv" => {
-    "group_users" => ['deploy']
+    "group_users" => ['deployer']
   },
   "deploy_users" => [
-        "deploy"
+        "deployer"
   ]
 )
