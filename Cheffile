@@ -10,6 +10,7 @@ cookbook "sudo", "~> 2.7.0"
 cookbook "rbenv", "~> 1.7.1"
 cookbook 'bundler', '~> 0.2.0'
 cookbook "ruby_build", "~> 0.8.0"
+cookbook "nginx_passenger", :git => "https://github.com/ewr/nginx_passenger-cookbook"
 
 # Our own cookbooks from vendor/
 cookbook "packages", path: "vendor/cookbooks/packages"
