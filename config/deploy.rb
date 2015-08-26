@@ -55,9 +55,9 @@ set :passenger_restart_with_touch, true
 namespace :deploy do
 
   desc 'Restart application'
+
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute bundle_install
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
